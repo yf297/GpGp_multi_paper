@@ -21,7 +21,7 @@ The settings folder contains the settings csv files
   * corrnug.csv 
 
 Each csv file contains several rows with different configurations.
-The code for each settings file is simple the filename without
+The code for each settings file is simply the filename without
 the .csv extension. 
 
 So for example, to fit the model corresponding to the configuration
