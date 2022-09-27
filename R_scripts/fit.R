@@ -17,8 +17,9 @@ fname <- paste0("../fits/fit_", settings_file, "_", settings_row, ".RData")
 # define settings variables
 order_fun <- get( settings$order_fun )
 neighbor_fun <- get( settings$neighbor_fun )
-m <- settings$m
-corrnug <- settings$corrnug
+m <- 20
+	#settings$m
+corrnug <- T#settings$corrnug
 
 # load the data
 data <- get(load(paste0("../data/formatted/", settings$data_code, ".RData")))
@@ -154,7 +155,10 @@ start_logparms <- fit1$logparms
 start_logparms[log_cross_ran_inds]  <- log(finv(M)) 
 start_logparms[log_delta_B_ind] <- log(0.01)
 start_logparms[log_cross_smo_inds]  <-  log(finv(M))  
-start_logparms[log_delta_A_ind] <- log(0.001) 
+start_logparms[log_delta_A_ind] <- log(0.01)
+if(settings$data_code == "weather"){
+start_logparms[log_delta_A_ind] <- log(0.001)}
+
 
 active_logparms <- rep(TRUE, length(start_logparms))
 if( !corrnug ){ active_logparms[ log_cross_nug_inds ] <- FALSE }

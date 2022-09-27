@@ -1,4 +1,4 @@
 corrnug,data_code,m,order_fun,neighbor_fun
-TRUE,weather,40,order_completely_random,nearest_multi_any
+TRUE,weather,20,order_completely_random,nearest_multi_any
 TRUE,france01,20,order_completely_random,nearest_multi_any
 TRUE,3a1,20,order_completely_random,nearest_multi_any
