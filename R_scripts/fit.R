@@ -17,9 +17,8 @@ fname <- paste0("../fits/fit_", settings_file, "_", settings_row, ".RData")
 # define settings variables
 order_fun <- get( settings$order_fun )
 neighbor_fun <- get( settings$neighbor_fun )
-m <- 20
-	#settings$m
-corrnug <- T#settings$corrnug
+m <- settings$m
+corrnug <- settings$corrnug
 
 # load the data
 data <- get(load(paste0("../data/formatted/", settings$data_code, ".RData")))
