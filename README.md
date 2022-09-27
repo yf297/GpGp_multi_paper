@@ -10,7 +10,7 @@ To run this setting, first an create a GpGp_multi_paper/fits directory. Navigate
 
 Rscript fit.R weather 1
 
-This will create fit_weather_1.RData in GpGp_multi_paper/fits directory
+This will create fit_weather_1.RData in GpGp_multi_paper/fits.
 
 To generate a table, navigate to the R_scripts directory and type
 
