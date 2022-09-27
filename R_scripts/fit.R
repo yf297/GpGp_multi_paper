@@ -11,7 +11,7 @@ settings_file <- args[1]
 settings_row <- as.numeric( args[2] )
 
 # load the settings
-settings <- read.csv(paste0("../settings/",settings_file,".csv"))[ settings_row, ]
+settings <- read.csv(paste0("../settings/",settings_file,".csv"), as.is=TRUE)[ settings_row, ]
 fname <- paste0("../fits/fit_", settings_file, "_", settings_row, ".RData")
 
 # define settings variables
