@@ -1,0 +1,29 @@
+#!/bin/bash
+
+cd R_scripts
+
+# vecchia study
+for J in {1..18}
+do
+    Rscript fit.R vecchia $J
+done
+ 
+# model study
+for J in {1..3}
+do
+    Rscript fit.R model $J
+done
+
+# correlated nuggets
+for J in {1..12}
+do
+    Rscript fit.R corrnug $J
+done
+
+# many datasets
+for J in {1..22}
+do
+    Rscript fit.R many_datasets $J
+done
+
+ 
