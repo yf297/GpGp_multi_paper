@@ -1,14 +1,25 @@
 # GpGp_multi_paper
 
-GpGpm should be in the same directory as GpGp_multi_paper
+GpGpm should be in the same directory as GpGp_multi_paper. Before
+starting navigate to R_scripts directory of this repository,
+and run
 
-The settings folder contains the csv files vecchia.csv weather.csv model.csv many_datasets.csv and corrnug.csv 
+```
+Rscript install.packages.R
+```
+
+The settings folder contains the csv files 
+  * vecchia.csv 
+  * weather.csv 
+  * model.csv 
+  * many_datasets.csv  
+  * corrnug.csv 
 
 Each csv file contains several rows with different configurations.
 
 The weather.csv is a simple example with only 1 row.
 
-To run this setting, first create a GpGp_multi_paper/fits directory. Navigate to the R_scripts directory and type
+To run this setting, navigate to the R_scripts directory and type
 
 Rscript fit.R weather 1
 
