@@ -32,7 +32,7 @@ and run.
 Rscript fit.R many_datasets 7
 ```
 
-This will create fit_many_datasets_1.RData in GpGp_multi_paper/fits.
+This will create fit_many_datasets_7.RData in GpGp_multi_paper/fits.
 
 As another example, navigate to the R_scripts directory and type
 
@@ -56,3 +56,4 @@ Rscript table_corrnug.R
 
 Note that the fit files need to be generated before the tables can be produced.
 
+All of the fits can be run by running the fit_all bash script.
