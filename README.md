@@ -10,9 +10,8 @@ To run this setting, first an create a R_scripts/fit.R directory. Navigate to th
 
 Rscript fit.R weather 1
 
-This will create fit_weather_1.RData in R_scripts/fit.R
-R_scripts/fit.R
+This will create fit_weather_1.RData in R_scripts/fits
 
-To generate a table,  Navigate to the R_scripts directory and type
+To generate a table, navigate to the R_scripts directory and type
 
 Rscipt table_weather.R
