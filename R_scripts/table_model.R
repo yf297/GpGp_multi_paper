@@ -37,3 +37,20 @@ print.xtable(
     sanitize.text.function = function(x) x,
     include.rownames = FALSE
 )
+
+tparms <- t(parms)
+rbtparms <- rbind( tparms[,1:5], tparms[,6:10], tparms[,11:15] )
+parm <- rownames( rbtparms )
+rbtparms <- as.data.frame( rbtparms )
+rbtparms$parm <- parm
+colnames(rbtparms) <- c("Independent","Parsimonious","Flexible-A","Flexible-E","Unconstrained")
+rbtparms$Dataset <- NA
+rbtparms$Dataset[c(1,14,27)] <- c("Weather","French Soil","Competition")
+
+row_ord <- 1:39
+col_ord <- c(7,6,1:5)
+print.xtable(
+    xtable(rbtparms[row_ord,col_ord]),
+    sanitize.text.function = function(x) x,
+    include.rownames = FALSE
+)

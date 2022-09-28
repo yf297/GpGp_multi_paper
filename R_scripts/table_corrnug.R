@@ -37,6 +37,7 @@ parms$Comp[ seq(2,12,by=2) ] <- ""
 
 row_ord <- 1:12
 col_ord <- c(14,13,1:12)
+col_ord <- c(14,1:12)
 print.xtable(
     xtable(parms[row_ord,col_ord]),
     sanitize.text.function = function(x) x,
