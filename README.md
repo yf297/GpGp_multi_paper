@@ -5,7 +5,7 @@ GpGp_multi_paper. Before starting navigate to R_scripts directory of this
 repository, and run
 
 ```
-Rscript install.packages.R
+Rscript install_packages.R
 ```
 
 The models are fit using the R script R_scripts/fit.R.
