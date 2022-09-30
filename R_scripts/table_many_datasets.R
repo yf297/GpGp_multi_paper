@@ -28,7 +28,7 @@ ids <- gsub("goes01_", "", ids )
 ids <- gsub("_", ",", ids )
 results$Comp <- ids
 
-digs <- c( rep( c(2,0,1), 5 ), 0 )
+digs <- c( rep( c(2,0,1), 5 ), 1 )
 
 
 row_ord <- 1:22

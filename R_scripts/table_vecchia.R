@@ -39,7 +39,8 @@ results$m <- settings$m
 digs <- c( rep( c(2,0,1), 5 ), 0, 0 )
 
 
-row_ord <- 1:18
+#row_ord <- 1:18
+row_ord <- c( seq(1,17,by=2), seq(2,18,by=2) )
 col_ord <- c(16, 17, 1,2, 4,5, 7,8, 10,11, 13,14)
 print.xtable(
     xtable(results[row_ord,col_ord], digits = c(0,digs[col_ord])),
