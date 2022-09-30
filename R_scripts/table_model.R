@@ -16,6 +16,7 @@ for(j in 1:nrow(settings)){
         cnt <- cnt + 1
         parms[cnt,1:12] <- fit[[k]]$covparms
         parms[cnt,13] <- fit[[k]]$loglik
+	print(fit[[k]]$time_elapsed)
         })
     }
 }
