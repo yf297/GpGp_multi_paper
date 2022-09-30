@@ -38,14 +38,14 @@ dat$component <- dat[,4]
 
 titles <- c("log N (g/kg)","log Zn (mg/kg)")
 
-pdf("../figures/plot_france01.pdf",width=8.0,height=2.0)
-par(mfrow=c(1,2), family = "serif", mar=c(1,2,3,1), oma = c(0,9,0,11) )
+pdf("../figures/plot_france01.pdf",width=9.0,height=2.5)
+par(mfrow=c(1,2), family = "serif", mar=c(1,2,2,3), oma = c(0,7,0,9) )
 for(j in 1:2){
     ii <- dat$component == j
     quilt.plot( dat$long[ii], dat$lat[ii], dat$logvalue[ii],
         axes = FALSE, col = viridis(64) )
     box()
-    mtext(titles[j], side=3, line = 1)
+    mtext(titles[j], side=3, line = 0.5, cex = 1.25)
     map("worldHires", add = TRUE )
 }
 dev.off()

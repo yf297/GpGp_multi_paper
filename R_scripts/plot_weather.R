@@ -4,25 +4,27 @@ library(viridis)
 library(maps)
 library(mapdata)
 
-load("../data/formatted/weather.RData")
-dat <- as.data.frame(weather)
-dat$long <- dat$X
-dat$lat <- dat$Y
-dat$component <- dat[,5]
-dat$response <- dat[,1]
+data("weather",package="RandomFields")
+weather <- as.data.frame(weather)
+
+#load("../data/formatted/weather.RData")
+#dat <- as.data.frame(weather)
+#dat$long <- dat$X
+#dat$lat <- dat$Y
+#dat$component <- dat[,5]
+#dat$response <- dat[,1]
 
 
-titles <- c("","")
+titles <- c("Pressure (Pa)","Temperature (C)")
 
-pdf("../figures/plot_weather.pdf",width=8,height=2.0)
-par(mfrow=c(1,2), family = "serif", mar=c(1,2,3,1), oma = c(0,9,0,11) )
+pdf("../figures/plot_weather.pdf",width=9,height=2.50)
+par(mfrow=c(1,2), family = "serif", mar=c(1,2,2,3), oma = c(0,7,0,9) )
 for(j in 1:2){
-    ii <- dat$component == j
-    quilt.plot( dat$long[ii], dat$lat[ii], dat$response[ii],
+    quilt.plot( weather$lon, weather$lat, weather[,j],
         axes = FALSE, col = viridis(64) )
     box()
-    mtext(titles[j], side=3, line = 1)
-    #map("worldHires", add = TRUE )
+    mtext(titles[j], side=3, line = 0.5, cex = 1.25)
+    map("worldHires", add = TRUE )
 }
 dev.off()
     
