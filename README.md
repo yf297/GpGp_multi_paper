@@ -1,7 +1,6 @@
 # GpGp_multi_paper
 
-The source R package GpGpm_0.4.0.tar.gz should be in the same directory as
-GpGp_multi_paper. Before starting navigate to R_scripts directory of this
+Before starting navigate to R_scripts directory of this
 repository, and run
 
 ```
