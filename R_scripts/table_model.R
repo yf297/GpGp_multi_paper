@@ -53,5 +53,6 @@ col_ord <- c(7,6,1:5)
 print.xtable(
     xtable(rbtparms[row_ord,col_ord]),
     sanitize.text.function = function(x) x,
-    include.rownames = FALSE
+    include.rownames = FALSE,
+    math.style.negative = TRUE
 )

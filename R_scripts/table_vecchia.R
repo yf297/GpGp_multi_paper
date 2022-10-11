@@ -45,5 +45,6 @@ col_ord <- c(16, 17, 1,2, 4,5, 7,8, 10,11, 13,14)
 print.xtable(
     xtable(results[row_ord,col_ord], digits = c(0,digs[col_ord])),
     sanitize.text.function = function(x) x,
-    include.rownames = FALSE
+    include.rownames = FALSE,
+    math.style.negative = TRUE
 )

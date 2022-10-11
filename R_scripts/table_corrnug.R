@@ -41,5 +41,6 @@ col_ord <- c(14,1:12)
 print.xtable(
     xtable(parms[row_ord,col_ord]),
     sanitize.text.function = function(x) x,
-    include.rownames = FALSE
+    include.rownames = FALSE,
+    math.style.negative = TRUE
 )
