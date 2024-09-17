@@ -88,7 +88,6 @@ active_logparms[c(
   param_indices$cross_nug_indices
 )] <- FALSE
 
-# Print message
 cat("Starting independent fit...\n")
 
 # Fit the model with independent components
@@ -117,7 +116,6 @@ if (!corrnug) {
   active_logparms[param_indices$cross_nug_indices] <- FALSE
 }
 
-# Print message
 cat("Starting flexible-A model fit...\n")
 
 # Fit the model with flexible-A cross-covariance structure
